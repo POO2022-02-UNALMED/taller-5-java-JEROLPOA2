@@ -1,4 +1,4 @@
-package zooAnimales;
+
 public class Ave extends Animal{
 
     private static ArrayList<Ave> listado;

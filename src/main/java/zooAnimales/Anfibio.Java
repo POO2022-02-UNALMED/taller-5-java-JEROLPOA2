@@ -1,3 +1,7 @@
+package zooAnimales;
+
+import java.util.ArrayList;
+
 public class Anfibio extends Animal{
 
     private static ArrayList<Anfibio> listado;
@@ -6,9 +10,9 @@ public class Anfibio extends Animal{
     private String colorPiel;
     private boolean venenoso;
 
-    public Anfibio(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona, String colorPiel, boolean venenoso){
+    public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso){
         
-        super(nombre,edad,habitat,genero,zona);
+        super(nombre,edad,habitat,genero);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
         listado.add(this);
@@ -24,7 +28,7 @@ public class Anfibio extends Animal{
 
 
     public int cantidadAnfibios(){
-        return this.listado.size();
+        return Anfibio.listado.size();
     }
 
     @Override
@@ -32,22 +36,22 @@ public class Anfibio extends Animal{
         return "saltar";
     }
 
-    public void crearRana(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona){
+    public void crearRana(String nombre, int edad, String habitat, String genero){
         
-        Reptil.ranas += 1;
+        Anfibio.ranas += 1;
 
-        rana = new Reptil(nombre,edad,"selva", genero, zona,"rojo", true);
+        Anfibio rana = new Anfibio(nombre,edad,"selva", genero,"rojo", true);
     }
 
-    public void crearSalamndra(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona){
+    public void crearSalamndra(String nombre, int edad, String habitat, String genero){
         
-        Reptil.salamandras += 1;
+        Anfibio.salamandras += 1;
 
-        salamandra = new Reptil(nombre,edad,"selva", genero, zona,"negro y amarillo", false);
+        Anfibio salamandra = new Anfibio(nombre,edad,"selva", genero,"negro y amarillo", false);
     }
 
     public void setListado(ArrayList<Anfibio> listado){
-        this.listado = listado;
+        Anfibio.listado = listado;
     }
     public void setVColorPielenenoso(boolean venenoso){
         this.venenoso = venenoso;
@@ -57,12 +61,12 @@ public class Anfibio extends Animal{
     }
 
     public ArrayList<Anfibio> getListado(){
-        return listado;
+        return Anfibio.listado;
     }
     public boolean getVColorPielenenoso(){
         return venenoso;
     }
-    public int getColorPiel(){
+    public String getColorPiel(){
         return colorPiel;
     }
 }

@@ -1,5 +1,8 @@
 package zooAnimales;
-public class Pez{
+
+import java.util.ArrayList;
+
+public class Pez extends Animal{
 
     private static ArrayList<Pez> listado;
     public static int salmones;
@@ -9,7 +12,7 @@ public class Pez{
 
     public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas){
 
-        super(nombre,edad,habitat,gener);
+        super(nombre,edad,habitat,genero);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
         listado.add(this);
@@ -23,7 +26,7 @@ public class Pez{
     }
 
     public int cantidadPeces(){
-        return this.listado.size();
+        return Pez.listado.size();
     }
 
     @Override
@@ -35,18 +38,18 @@ public class Pez{
         
         Pez.salmones += 1;
 
-        salmon = new Pez(nombre,edad,"oceano", genero,"rojo",6);
+        Pez salmon = new Pez(nombre,edad,"oceano", genero,"rojo",6);
     }
 
     public void crearBacalao(String nombre, int edad, String habitat, String genero){
         
         Pez.bacalaos += 1;
 
-        bacalao = new Pez(nombre,edad,"oceano", genero,"blanco",6);
+        Pez bacalao = new Pez(nombre,edad,"oceano", genero,"blanco",6);
     }
 
     public void setListado(ArrayList<Pez> listado){
-        this.listado = listado;
+        Pez.listado = listado;
     }
     public void setColorEscamas(String colorEscamas){
         this.colorEscamas = colorEscamas;
@@ -56,7 +59,7 @@ public class Pez{
     }
 
     public ArrayList<Pez> getListado(){
-        return listado;
+        return Pez.listado;
     }
     public String getColorEscamas(){
         return colorEscamas;

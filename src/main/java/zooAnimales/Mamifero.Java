@@ -1,4 +1,4 @@
-
+package zooAnimales;
 public class Mamifero extends Animal{
     
     private static ArrayList<Mamifero> listado;

@@ -7,9 +7,9 @@ public class Reptil extends Animal{
     private String colorEscamas;
     private int largoCola;
 
-    public Reptil(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona, String colorEscamas, int largoCola){
+    public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola){
 
-        super(nombre,edad,habitat,genero,zona);
+        super(nombre,edad,habitat,gener);
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
         listado.add(this);
@@ -31,18 +31,18 @@ public class Reptil extends Animal{
         return "reptar";
     }
 
-    public void crearIguana(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona){
+    public void crearIguana(String nombre, int edad, String habitat, String genero){
         
         Reptil.iguanas += 1;
 
-        iguana = new Reptil(nombre,edad,"humedal", genero, zona,"verde",3);
+        iguana = new Reptil(nombre,edad,"humedal", genero,"verde",3);
     }
 
-    public void crearSerpiente(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona){
+    public void crearSerpiente(String nombre, int edad, String habitat, String genero){
         
         Reptil.serpientes += 1;
 
-        serpiente = new Reptil(nombre,edad,"jungla", genero, zona,"blanco",1);
+        serpiente = new Reptil(nombre,edad,"jungla", genero,"blanco",1);
     }
 
     public void setListado(ArrayList<Reptil> listado){

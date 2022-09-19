@@ -7,9 +7,9 @@ public class Pez{
     private String colorEscamas;
     private int cantidadAletas;
 
-    public Pez(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona, String colorEscamas, int cantidadAletas){
+    public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas){
 
-        super(nombre,edad,habitat,genero,zona);
+        super(nombre,edad,habitat,gener);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
         listado.add(this);
@@ -31,18 +31,18 @@ public class Pez{
         return "nadar";
     }
 
-    public void crearSalmon(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona){
+    public void crearSalmon(String nombre, int edad, String habitat, String genero){
         
         Pez.salmones += 1;
 
-        salmon = new Pez(nombre,edad,"oceano", genero, zona,"rojo",6);
+        salmon = new Pez(nombre,edad,"oceano", genero,"rojo",6);
     }
 
-    public void crearBacalao(String nombre, int edad, String habitat, String genero,ArrayList<Zona> zona){
+    public void crearBacalao(String nombre, int edad, String habitat, String genero){
         
         Pez.bacalaos += 1;
 
-        bacalao = new Pez(nombre,edad,"oceano", genero, zona,"blanco",6);
+        bacalao = new Pez(nombre,edad,"oceano", genero,"blanco",6);
     }
 
     public void setListado(ArrayList<Pez> listado){

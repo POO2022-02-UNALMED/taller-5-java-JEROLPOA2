@@ -1,4 +1,3 @@
-package zooAnimales;
 public class Anfibio extends Animal{
 
     private static ArrayList<Anfibio> listado;

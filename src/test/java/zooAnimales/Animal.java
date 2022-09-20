@@ -12,7 +12,7 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private  static ArrayList<Zona> zona;
+    private static Zona zona;
 
     public Animal(String nombre, int edad, String habitat, String genero){
 
@@ -43,7 +43,7 @@ public class Animal {
     public String toString() {
         
         if(zona != null){
-            return "Mi nombre es " + nombre + ", tengo una edad de " + edad +", habito en " + habitat + " y mi genero es" + genero + ", la zona en la que me ubico es" + zona +", en el #zoo";
+            return "Mi nombre es " + nombre + ", tengo una edad de " + edad +", habito en " + habitat + " y mi genero es" + genero + ", la zona en la que me ubico es" + zona + ", en el " + zona.getZoo().getNombre();
         }
         
         else{
@@ -63,7 +63,7 @@ public class Animal {
     public void setGenero(String genero){
         this.genero = genero;
     }
-    public void setZona(ArrayList<Zona> zona){
+    public void setZona(Zona zona){
         Animal.zona = zona;
     }
 
@@ -79,7 +79,7 @@ public class Animal {
     public String getGenero(){
         return genero;
     }
-    public ArrayList<Zona> getZona(){
+    public Zona getZona(){
         return zona;
     }
 }

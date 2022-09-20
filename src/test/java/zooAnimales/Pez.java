@@ -1,6 +1,7 @@
 package zooAnimales;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Pez extends Animal{
 
@@ -24,6 +25,8 @@ public class Pez extends Animal{
     }
 
     public static int cantidadPeces(){
+
+        listado.removeAll(Collections.singleton(null));
         return Pez.listado.size();
     }
 

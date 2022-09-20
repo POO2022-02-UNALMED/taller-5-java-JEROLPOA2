@@ -1,6 +1,7 @@
 package zooAnimales;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Anfibio extends Animal{
 
@@ -26,6 +27,8 @@ public class Anfibio extends Animal{
 
 
     public static int cantidadAnfibios(){
+
+        listado.removeAll(Collections.singleton(null));
         return Anfibio.listado.size();
     }
 

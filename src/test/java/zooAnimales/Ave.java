@@ -1,6 +1,7 @@
 package zooAnimales;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Ave extends Animal{
 
@@ -23,6 +24,8 @@ public class Ave extends Animal{
     }
 
     public static int cantidadAves(){
+
+        listado.removeAll(Collections.singleton(null));
         return Ave.listado.size();
     }
 

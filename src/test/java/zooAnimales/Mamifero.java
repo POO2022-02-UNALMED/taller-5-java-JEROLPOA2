@@ -1,6 +1,7 @@
 package zooAnimales;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Mamifero extends Animal{
     
@@ -25,6 +26,8 @@ public class Mamifero extends Animal{
     }
 
     public static int cantidadMamiferos(){
+
+        listado.removeAll(Collections.singleton(null));
         return Mamifero.listado.size();
     }
 

@@ -22,7 +22,7 @@ public class Ave extends Animal{
         listado.add(this);
     }
 
-    public int cantidadAves(){
+    public static int cantidadAves(){
         return Ave.listado.size();
     }
 
@@ -31,18 +31,20 @@ public class Ave extends Animal{
         return "volar";
     }
 
-    public void crearHalcon(String nombre, int edad, String habitat, String genero){
+    public static Ave crearHalcon(String nombre, int edad, String genero){
         
         Ave.halcones += 1;
 
         Ave halcon = new Ave(nombre,edad,"montanas", genero,"cafe glorioso");
+        return halcon;
     }
 
-    public void crearAguila(String nombre, int edad, String habitat, String genero){
+    public static Ave crearAguila(String nombre, int edad, String genero){
         
         Ave.aguilas += 1;
 
         Ave aguila = new Ave(nombre,edad,"montanas", genero,"blanco y amarillo");
+        return aguila;
     }
 
     public void setListado(ArrayList<Ave> listado){
@@ -60,3 +62,4 @@ public class Ave extends Animal{
     }
 
 }
+

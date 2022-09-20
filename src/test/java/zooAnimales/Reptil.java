@@ -25,7 +25,7 @@ public class Reptil extends Animal{
         listado.add(this);
     }
 
-    public int cantidadReptiles(){
+    public static int cantidadReptiles(){
         return Reptil.listado.size();
     }
 
@@ -34,18 +34,20 @@ public class Reptil extends Animal{
         return "reptar";
     }
 
-    public void crearIguana(String nombre, int edad, String habitat, String genero){
+    public static Reptil crearIguana(String nombre, int edad, String genero){
         
         Reptil.iguanas += 1;
 
         Reptil iguana = new Reptil(nombre,edad,"humedal", genero,"verde",3);
+        return iguana;
     }
 
-    public void crearSerpiente(String nombre, int edad, String habitat, String genero){
+    public static Reptil crearSerpiente(String nombre, int edad, String genero){
         
         Reptil.serpientes += 1;
 
         Reptil serpiente = new Reptil(nombre,edad,"jungla", genero,"blanco",1);
+        return serpiente;
     }
 
     public void setListado(ArrayList<Reptil> listado){

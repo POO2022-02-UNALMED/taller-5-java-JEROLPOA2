@@ -1,4 +1,5 @@
 package zooAnimales;
+
 import java.util.ArrayList;
 
 
@@ -35,8 +36,11 @@ public class Animal {
         return "desplazarse";
     }
 
-    public void totalPorTipo(){
+    public static String totalPorTipo(){
+       
+        String str = "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" + "Aves: " + Ave.cantidadAves() + "\n" + "Reptiles: " + Reptil.cantidadReptiles() + "\n" + Pez.cantidadPeces() + "\n" + Anfibio.cantidadAnfibios();
 
+        return str;
     }
 
     @Override

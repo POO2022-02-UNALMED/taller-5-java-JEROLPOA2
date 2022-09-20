@@ -21,8 +21,6 @@ public class Mamifero extends Animal{
     public Mamifero(){
 
         super();
-        this.pelaje = false;
-        this.patas = 0;
         listado.add(this);
     }
 

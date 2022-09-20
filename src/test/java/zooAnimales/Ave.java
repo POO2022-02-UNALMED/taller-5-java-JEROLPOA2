@@ -18,7 +18,7 @@ public class Ave extends Animal{
 
     public Ave(){
         super();
-        this.colorPlumas = "";
+
         listado.add(this);
     }
 

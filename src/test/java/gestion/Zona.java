@@ -17,7 +17,6 @@ public class Zona {
 
     public Zona(){
         
-        this.nombre = "";
     }
 
     public void agregarAnimales(Animal animal){

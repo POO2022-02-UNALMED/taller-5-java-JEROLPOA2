@@ -26,10 +26,6 @@ public class Animal {
     public Animal(){
 
         Animal.totalAnimales += 1;
-        this.nombre = "";
-        this.edad = 0;
-        this.habitat = "";
-        this.genero = "";
     }
 
     public String movimiento(){

@@ -15,12 +15,12 @@ public class Pez extends Animal{
         super(nombre,edad,habitat,genero);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
-        listado.add(this);
+
     }
 
     public Pez(){
         super();
-        listado.add(this);
+
     }
 
     public static int cantidadPeces(){

@@ -13,13 +13,10 @@ public class Ave extends Animal{
 
         super(nombre,edad,habitat,genero);
         this.colorPlumas = colorPlumas;
-        listado.add(this);
     }
 
     public Ave(){
         super();
-
-        listado.add(this);
     }
 
     public static int cantidadAves(){
